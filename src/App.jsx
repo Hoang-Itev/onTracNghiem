@@ -9,26 +9,26 @@ function App() {
 
  return (
     <div className="quiz-app">
-      {/* Thanh điều hướng */}
+      
       <nav className="navbar">
-        <div className="logo">QuizMaster Pro</div>
+        <div className="logo">Quiz</div>
         <ul className="nav-links">
           <li>Trang chủ</li>
           <li>Thư viện đề</li>
           <li>Lịch sử thi</li>
-          <li className="user-info">Chào, Việt Hoàng</li>
+          
         </ul>
       </nav>
 
-      {/* Nội dung chính */}
+     
       <main className="main-content">
         <header className="hero">
-          <h1>Hệ Thống Ôn Thi Trắc Nghiệm Online</h1>
+          <h1>Ôn Thi Trắc Nghiệm Online</h1>
           <p>Luyện tập kiến thức mỗi ngày với kho đề thi đa dạng.</p>
           <button className="btn-start">Bắt đầu thi ngay</button>
         </header>
 
-        {/* Danh sách các môn học (Ví dụ) */}
+        
         <section className="subject-list">
           <h2>Các môn học phổ biến</h2>
           <div className="card-container">
