@@ -1,57 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import AboutUs from './pages/AboutUs';
+// import Library from './pages/Library';
+// import History from './pages/History';
+
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  return (
+    // BrowserRouter bọc toàn bộ ứng dụng để bật tính năng routing
+    <BrowserRouter>
+      <div className="quiz-app">
+        {/* Navbar đặt ngoài Routes để luôn hiển thị ở mọi trang */}
+        <Navbar />
 
- return (
-    <div className="quiz-app">
-      
-      <nav className="navbar">
-        <div className="logo">Quiz</div>
-        <ul className="nav-links">
-          <li>Trang chủ</li>
-          <li>Thư viện đề</li>
-          <li>Lịch sử thi</li>
-          
-        </ul>
-      </nav>
-
-     
-      <main className="main-content">
-        <header className="hero">
-          <h1>Ôn Thi Trắc Nghiệm Online</h1>
-          <p>Luyện tập kiến thức mỗi ngày với kho đề thi đa dạng.</p>
-          <button className="btn-start">Bắt đầu thi ngay</button>
-        </header>
-
-        
-        <section className="subject-list">
-          <h2>Các môn học phổ biến</h2>
-          <div className="card-container">
-            <div className="subject-card">
-              <h3>Lập trình Java</h3>
-              <p>40 câu hỏi - 60 phút</p>
-              <button>Vào thi</button>
-            </div>
-            <div className="subject-card">
-              <h3>Mạng máy tính</h3>
-              <p>30 câu hỏi - 45 phút</p>
-              <button>Vào thi</button>
-            </div>
-            <div className="subject-card">
-              <h3>Cơ sở dữ liệu</h3>
-              <p>25 câu hỏi - 30 phút</p>
-              <button>Vào thi</button>
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
-  )
+        <main className="main-content">
+          {/* Routes sẽ quyết định render Component nào dựa trên URL */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            
+            {/* Bạn có thể tạo thêm các trang này và mở comment */}
+            {/* <Route path="/library" element={<Library />} /> */}
+            {/* <Route path="/history" element={<History />} /> */}
+          </Routes>
+        </main>
+      </div>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

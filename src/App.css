@@ -67,8 +67,7 @@ font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, san
 .subject-card {
   background: #fff;
   padding: 20px;
-  border: 1px solid #ddd; /* Dùng border thay vì bóng đổ mạnh */
-  text-align: center;
+  border: 1px solid #ddd;
 }
 
 .subject-card h3 {
