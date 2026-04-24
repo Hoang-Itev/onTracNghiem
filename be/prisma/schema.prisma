@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql" // Có thể đổi thành "postgresql" hoặc "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Định nghĩa bảng câu hỏi
+model Question {
+  id            Int      @id @default(autoincrement())
+  content       String
+  optionA       String
+  optionB       String
+  optionC       String
+  optionD       String
+  correctAnswer String
+}
